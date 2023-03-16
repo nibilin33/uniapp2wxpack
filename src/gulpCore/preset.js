@@ -2,7 +2,7 @@ const path = require('path')
 global.projectToSubPackageConfig = JSON.parse(process.env.TEST);
 const program = {};
 program.scope = process.cwd();
-program.type = process.en.UNI_UTS_PLATFORM || 'weixin';
+program.type = process.env.UNI_UTS_PLATFORM || 'weixin';
 // 支持多种小程序解耦构建，默认为微信
 const mpTypeNamespace = {
     weixin: {
