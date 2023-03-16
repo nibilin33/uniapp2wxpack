@@ -1,6 +1,6 @@
 {
-  "name": "uniapp2wxpack",
-  "version": "3.4.3",
+  "name": "@nibilin33/uniapp2wxpack",
+  "version": "1.0.0",
   "description": "Uni-App的小程序混合开发（解耦构建）插件",
   "main": "./dist/lib/index.js",
   "scripts": {
@@ -16,7 +16,7 @@
   "homepage": "https://github.com/devilwjp/uniapp2wxpack",
   "repository": {
     "type": "git",
-    "url": "https://github.com/devilwjp/uniapp2wxpack"
+    "url": "git+https://github.com/nibilin33/uniapp2wxpack.git"
   },
   "author": "Devle Wu（天堂里的花大咩）",
   "license": "ISC",
