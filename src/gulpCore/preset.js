@@ -1,14 +1,8 @@
 const path = require('path')
-const { program } = require('commander');
-program
-    .option('--scope <type>', '运行目录', process.cwd())
-    .option('--plugin', '插件模式')
-    .option('--type <type>', '解耦包类型(哪种小程序)', 'weixin')
-    .option('--native', '原生模式')
-    .option('--gulpfile', '')
-    .option('--cwd', '')
-
-program.parse(process.argv);
+global.projectToSubPackageConfig = JSON.parse(process.env.TEST);
+const program = {};
+program.scope = process.cwd();
+program.type = process.en.UNI_UTS_PLATFORM || 'weixin';
 // 支持多种小程序解耦构建，默认为微信
 const mpTypeNamespace = {
     weixin: {
@@ -54,7 +48,8 @@ const currentNamespace = mpTypeNamespace[program.type]
 if (!currentNamespace) throw Error('小程序类型错')
 process.env.PACK_TYPE = program.type
 const cwd = program.scope
-const projectToSubPackageConfig = require(path.resolve(cwd,'./projectToSubPackageConfig'))
+const projectToSubPackageConfig = global.projectToSubPackageConfig || {};
+// require(path.resolve(cwd,'./projectToSubPackageConfig'))
 const sourceCodePath = projectToSubPackageConfig.sourceCodePath || 'src'
 const wxResourcePath = projectToSubPackageConfig.wxResourcePath || `${sourceCodePath}/${currentNamespace.globalObject}resource`
 const wxResourceAlias = projectToSubPackageConfig.wxResourceAlias || `@wxResource`

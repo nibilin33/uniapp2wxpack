@@ -24,6 +24,7 @@
     "@dcloudio/uni-cli-shared": "^2.0.0"
   },
   "dependencies": {
+    "@dcloudio/vue-cli-plugin-uni": "^2.0.2-3070320230222001",
     "acorn-globals": "^6.0.0",
     "chokidar": "^3.4.2",
     "commander": "^5.0.0",
@@ -48,6 +49,7 @@
     "gulp-watch": "^5.0.1",
     "postcss-comment": "^2.0.0",
     "preprocess": "^3.2.0",
+    "shelljs": "^0.8.5",
     "shorthash2": "^1.0.3",
     "single-line-log": "^1.1.2",
     "strip-json-comments": "^3.0.1",

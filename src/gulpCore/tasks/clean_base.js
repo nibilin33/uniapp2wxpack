@@ -2,6 +2,7 @@ const del = require('del')
 const gulp = require('gulp')
 const {basePath} = require('../preset')
 const {tryAgain} = require('../utils')
+console.log('run gulp task')
 gulp.task('clean:base', async function f (done) {
     try {
         await del([basePath + '/**/*'], {force: true})
